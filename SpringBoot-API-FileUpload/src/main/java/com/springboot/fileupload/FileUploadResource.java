@@ -41,7 +41,7 @@ public class FileUploadResource {
 			String fileName = file.getOriginalFilename();
 			InputStream is = file.getInputStream();
 			String extension = fileName.substring(fileName.lastIndexOf('.') + 1);
-			if (extension != "json") {
+			if (extension.equals("json")) {
 				Files.copy(is, Paths.get(path + fileName), StandardCopyOption.REPLACE_EXISTING);
 				Customer customer = jsonDataReader.generateData(path + fileName);
 				customerRepository.save(customer);

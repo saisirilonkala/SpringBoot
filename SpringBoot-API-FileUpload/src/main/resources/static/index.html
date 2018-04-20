@@ -1,17 +1,43 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Uploading file</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <h1>Uploading file</h1>
-
-        <form action="/doUpload" method="post" enctype="multipart/form-data">
-            <label>Enter file</label>
-            <input type="file" name="file">
-            <button type="submit">Upload</button>
-        </form>
-    </body>
+<head>
+<title>Uploading file</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Website Font style -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+<link
+	href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
+<link th:href="@{/css/main.css}" rel="stylesheet" type="text/css"></link>
+<script
+	src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="wrapper">
+			<form action="/doUpload" method="post" enctype="multipart/form-data">
+				<h3 class="form-signin-heading">Spring Boot - File Upload</h3>
+				<hr class="colorgraph">
+				<br>
+				<div class="form-group">
+					<label for="name" class="cols-sm-2 control-label">Select
+						File</label>
+					<div class="cols-sm-10">
+						<div class="input-group">
+							<span class="input-group-addon"><i class="fa fa-upload"
+								aria-hidden="true"></i></span> <input type="file" class="form-control"
+								name="file" placeholder="Username" required="" autofocus="" />
+						</div>
+					</div>
+				</div>
+				<br>
+				<button class="btn btn-lg btn-primary btn-block" name="Upload"
+					value="Upload" type="Submit">Upload</button>
+			</form>
+		</div>
+	</div>
+</body>
 </html>
